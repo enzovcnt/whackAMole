@@ -1,13 +1,29 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 .hole{
-    width: 100px;
-    height: 100px;
+    flex: 1 0 33.33%;
     border: black solid 1px;
+    overflow: hidden;
+    position: relative;
+
 }
 .game{
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 400px;
     border: black solid 1px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+}
+.mole{
+    width: 20px;
+    height: 20px;
+    border: red solid 1px;
+    top: 100%;
+    transition: all 0.4s;
+    position: absolute;
+}
+.hole.up .mole{
+    top:0;
 }
